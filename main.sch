@@ -124,21 +124,21 @@ F 3 "" H 2050 3500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Text GLabel 2050 3600 0    50   Input ~ 0
-USB5_DM
+USB5-
 Text GLabel 2050 3700 0    50   Input ~ 0
-USB5_DP
+USB5+
 Text GLabel 2050 3800 0    50   Input ~ 0
-USB_DM_UP
+USB_UP-
 Text GLabel 2050 3900 0    50   Input ~ 0
-USB_DP_UP
+USB_UP+
 Text GLabel 8450 5550 2    50   Input ~ 0
-USB2_DP
+USB2+
 Text GLabel 8450 5650 2    50   Input ~ 0
-USB2_DM
+USB2-
 Text GLabel 8450 4700 2    50   Input ~ 0
-USB1_DM
+USB1-
 Text GLabel 8450 4600 2    50   Input ~ 0
-USB1_DP
+USB1+
 $Comp
 L microchip:USB2514B_Bi U2
 U 1 1 5C6F1910
@@ -345,9 +345,9 @@ $EndComp
 Wire Wire Line
 	8500 3300 8550 3300
 Text GLabel 8500 3600 2    50   Input ~ 0
-USB3_DM
+USB3-
 Text GLabel 8500 3500 2    50   Input ~ 0
-USB3_DP
+USB3+
 Wire Wire Line
 	8100 3900 8200 3900
 Connection ~ 8200 3900
@@ -387,9 +387,9 @@ $EndComp
 Wire Wire Line
 	8500 2350 8550 2350
 Text GLabel 8500 2650 2    50   Input ~ 0
-USB4_DM
+USB4-
 Text GLabel 8500 2550 2    50   Input ~ 0
-USB4_DP
+USB4+
 $Comp
 L power:+3V3 #PWR0109
 U 1 1 5C752C48
@@ -419,21 +419,21 @@ Wire Wire Line
 	5300 1800 5300 1650
 Connection ~ 5300 1800
 Text GLabel 6700 2500 2    50   Input ~ 0
-USB1_DP
+USB1+
 Text GLabel 6700 2400 2    50   Input ~ 0
-USB1_DM
+USB1-
 Text GLabel 6700 3000 2    50   Input ~ 0
-USB2_DP
+USB2+
 Text GLabel 6700 2900 2    50   Input ~ 0
-USB2_DM
+USB2-
 Text GLabel 6700 3400 2    50   Input ~ 0
-USB3_DM
+USB3-
 Text GLabel 6700 3500 2    50   Input ~ 0
-USB3_DP
+USB3+
 Text GLabel 6700 3900 2    50   Input ~ 0
-USB4_DM
+USB4-
 Text GLabel 6700 4000 2    50   Input ~ 0
-USB4_DP
+USB4+
 $Comp
 L conn:USB_A J5
 U 1 1 5C753BD9
@@ -470,13 +470,13 @@ $EndComp
 Wire Wire Line
 	8500 1350 8550 1350
 Text GLabel 8500 1650 2    50   Input ~ 0
-USB5_DM
+USB5-
 Text GLabel 8500 1550 2    50   Input ~ 0
-USB5_DP
+USB5+
 Text GLabel 4500 2600 0    50   Input ~ 0
-USB_DM_UP
+USB_UP-
 Text GLabel 4500 2700 0    50   Input ~ 0
-USB_DP_UP
+USB_UP+
 Wire Wire Line
 	1500 5300 1500 5100
 Wire Wire Line
@@ -570,7 +570,7 @@ U 1 1 5C7730EF
 P 1350 2800
 F 0 "J6" H 1450 2600 50  0000 C CNN
 F 1 "Conn_01x02" H 1270 2566 50  0001 C CNN
-F 2 "Connectors_Terminal_Blocks:TerminalBlock_bornier-2_P5.08mm" H 1350 2800 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm_SMD_Pin1Right" H 1350 2800 50  0001 C CNN
 F 3 "~" H 1350 2800 50  0001 C CNN
 	1    1350 2800
 	-1   0    0    1   
@@ -607,8 +607,9 @@ U 1 1 5C776CD3
 P 4000 3450
 F 0 "Y1" H 3800 3550 50  0000 L CNN
 F 1 "25MHz/50ppm" H 3550 3650 50  0000 L CNN
-F 2 "Oscillators:Oscillator_SMD_Abracon_ASE-4pin_3.2x2.5mm" H 4000 3450 50  0001 C CNN
+F 2 "Crystals:Crystal_SMD_Abracon_ABM3-2pin_5.0x3.2mm" H 4000 3450 50  0001 C CNN
 F 3 "~" H 4000 3450 50  0001 C CNN
+F 4 "https://datasheet.octopart.com/ABM7-25.000MHZ-B4-T-Abracon-datasheet-5320088.pdf" H 4000 3450 50  0001 C CNN "1st Disrtib Link"
 	1    4000 3450
 	0    1    1    0   
 $EndComp
@@ -971,4 +972,25 @@ Connection ~ 2550 5100
 Wire Wire Line
 	2800 5500 2550 5500
 Connection ~ 2550 5500
+$Comp
+L device:C_Small C16
+U 1 1 5C7B3A70
+P 3050 5350
+F 0 "C16" V 3000 5400 50  0000 L CNN
+F 1 "100n" V 3100 5400 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 3050 5350 50  0001 C CNN
+F 3 "~" H 3050 5350 50  0001 C CNN
+	1    3050 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 5250 3050 5100
+Wire Wire Line
+	3050 5100 2800 5100
+Connection ~ 2800 5100
+Wire Wire Line
+	3050 5450 3050 5500
+Wire Wire Line
+	3050 5500 2800 5500
+Connection ~ 2800 5500
 $EndSCHEMATC
