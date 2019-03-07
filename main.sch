@@ -657,27 +657,9 @@ Wire Wire Line
 Wire Wire Line
 	4350 3500 4350 3600
 Wire Wire Line
-	3500 3200 3700 3200
-Wire Wire Line
 	4000 3300 4000 3200
 Wire Wire Line
 	4000 3200 4350 3200
-$Comp
-L device:R_Small R4
-U 1 1 5C77E0DE
-P 3700 3450
-F 0 "R4" H 3759 3496 50  0000 L CNN
-F 1 "1M" H 3759 3405 50  0000 L CNN
-F 2 "Resistors_SMD:R_0603" H 3700 3450 50  0001 C CNN
-F 3 "~" H 3700 3450 50  0001 C CNN
-	1    3700 3450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3700 3350 3700 3200
-Connection ~ 3700 3200
-Wire Wire Line
-	3700 3200 4000 3200
 Connection ~ 4000 3200
 $Comp
 L device:C_Small C14
@@ -694,15 +676,8 @@ Connection ~ 3300 3600
 Wire Wire Line
 	3300 3600 3300 3650
 Wire Wire Line
-	3500 3600 3700 3600
-Wire Wire Line
 	4000 3600 4350 3600
 Connection ~ 4000 3600
-Wire Wire Line
-	3700 3550 3700 3600
-Connection ~ 3700 3600
-Wire Wire Line
-	3700 3600 4000 3600
 Wire Wire Line
 	4000 3700 4500 3700
 $Comp
@@ -847,84 +822,8 @@ F 3 "" H 4500 3000 50  0001 C CNN
 	1    4500 3000
 	0    1    1    0   
 $EndComp
-$Comp
-L power:+5V #PWR0129
-U 1 1 5C7997D0
-P 3400 2400
-F 0 "#PWR0129" H 3400 2250 50  0001 C CNN
-F 1 "+5V" H 3415 2573 50  0000 C CNN
-F 2 "" H 3400 2400 50  0001 C CNN
-F 3 "" H 3400 2400 50  0001 C CNN
-	1    3400 2400
-	0    -1   -1   0   
-$EndComp
-$Comp
-L device:R_Small R2
-U 1 1 5C799966
-P 3500 2400
-F 0 "R2" V 3304 2400 50  0000 C CNN
-F 1 "100k" V 3395 2400 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" H 3500 2400 50  0001 C CNN
-F 3 "~" H 3500 2400 50  0001 C CNN
-	1    3500 2400
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	2750 2900 4500 2900
-$Comp
-L device:C_Small C11
-U 1 1 5C79EBA0
-P 3400 2500
-F 0 "C11" V 3450 2600 50  0000 L CNN
-F 1 "1uF" V 3350 2550 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 3400 2500 50  0001 C CNN
-F 3 "~" H 3400 2500 50  0001 C CNN
-	1    3400 2500
-	-1   0    0    1   
-$EndComp
-Connection ~ 3400 2400
-$Comp
-L power:GND #PWR0130
-U 1 1 5C79EBF8
-P 3400 2750
-F 0 "#PWR0130" H 3400 2500 50  0001 C CNN
-F 1 "GND" H 3300 2650 50  0000 C CNN
-F 2 "" H 3400 2750 50  0001 C CNN
-F 3 "" H 3400 2750 50  0001 C CNN
-	1    3400 2750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3400 2750 3400 2600
-Wire Wire Line
-	3600 2400 3700 2400
-$Comp
-L device:R_Small R3
-U 1 1 5C7A1438
-P 3700 2600
-F 0 "R3" H 3641 2554 50  0000 R CNN
-F 1 "100k" H 3641 2645 50  0000 R CNN
-F 2 "Resistors_SMD:R_0603" H 3700 2600 50  0001 C CNN
-F 3 "~" H 3700 2600 50  0001 C CNN
-	1    3700 2600
-	-1   0    0    1   
-$EndComp
-Connection ~ 3700 2400
-$Comp
-L power:GND #PWR0131
-U 1 1 5C7A14B3
-P 3700 2750
-F 0 "#PWR0131" H 3700 2500 50  0001 C CNN
-F 1 "GND" H 3600 2650 50  0000 C CNN
-F 2 "" H 3700 2750 50  0001 C CNN
-F 3 "" H 3700 2750 50  0001 C CNN
-	1    3700 2750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3700 2750 3700 2700
-Wire Wire Line
-	3700 2400 4500 2400
 $Comp
 L power:+5V #PWR0132
 U 1 1 5C7A5856
@@ -936,8 +835,6 @@ F 3 "" H 2200 1850 50  0001 C CNN
 	1    2200 1850
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	3700 2500 3700 2400
 $Comp
 L power:GND #PWR0133
 U 1 1 5C7A7806
@@ -993,4 +890,27 @@ Wire Wire Line
 Wire Wire Line
 	3050 5500 2800 5500
 Connection ~ 2800 5500
+Wire Wire Line
+	3600 2400 4500 2400
+$Comp
+L power:+3V3 #PWR0129
+U 1 1 5C7E7E02
+P 3600 2400
+F 0 "#PWR0129" H 3600 2250 50  0001 C CNN
+F 1 "+3V3" V 3615 2528 50  0000 L CNN
+F 2 "" H 3600 2400 50  0001 C CNN
+F 3 "" H 3600 2400 50  0001 C CNN
+	1    3600 2400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3500 3200 4000 3200
+Wire Wire Line
+	3500 3600 4000 3600
+Wire Wire Line
+	8100 2950 8200 2950
+Connection ~ 8200 2950
+Wire Wire Line
+	8100 1950 8200 1950
+Connection ~ 8200 1950
 $EndSCHEMATC
