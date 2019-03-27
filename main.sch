@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:main-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L conn:Conn_01x06_Female J10
+L main-rescue:Conn_01x06_Female-conn J10
 U 1 1 5C190DE9
 P 2250 3600
 F 0 "J10" H 2277 3576 50  0000 L CNN
@@ -26,7 +26,7 @@ F 3 "~" H 2250 3600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conn:USB_A J1
+L main-rescue:USB_A-conn J1
 U 1 1 5C190FCC
 P 8150 4600
 F 0 "J1" H 8300 4950 50  0000 C CNN
@@ -37,7 +37,7 @@ F 3 "" H 8300 4550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conn:USB_A J2
+L main-rescue:USB_A-conn J2
 U 1 1 5C1910B4
 P 8150 5550
 F 0 "J2" H 8300 5900 50  0000 C CNN
@@ -278,7 +278,6 @@ F 3 "~" H 2500 1750 50  0001 C CNN
 	1    2500 1750
 	-1   0    0    1   
 $EndComp
-Connection ~ 2500 1650
 Wire Wire Line
 	2500 1850 2500 2050
 Wire Wire Line
@@ -294,23 +293,8 @@ F 3 "" H 1500 5500 50  0001 C CNN
 	1    1500 5500
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1500 5500 1750 5500
-Connection ~ 1500 5500
-Connection ~ 1750 5500
-Wire Wire Line
-	1750 5500 1950 5500
-Connection ~ 1950 5500
-Wire Wire Line
-	1950 5500 2150 5500
-Connection ~ 2150 5500
-Wire Wire Line
-	2150 5500 2350 5500
-Connection ~ 2350 5500
-Wire Wire Line
-	2350 5500 2550 5500
 $Comp
-L conn:USB_A J3
+L main-rescue:USB_A-conn J3
 U 1 1 5C6F37E2
 P 8200 3500
 F 0 "J3" H 8350 3850 50  0000 C CNN
@@ -352,7 +336,7 @@ Wire Wire Line
 	8100 3900 8200 3900
 Connection ~ 8200 3900
 $Comp
-L conn:USB_A J4
+L main-rescue:USB_A-conn J4
 U 1 1 5C6F3BD1
 P 8200 2550
 F 0 "J4" H 8350 2900 50  0000 C CNN
@@ -402,22 +386,7 @@ F 3 "" H 5300 1650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5300 1800 5400 1800
-Connection ~ 5400 1800
-Wire Wire Line
-	5400 1800 5500 1800
-Connection ~ 5500 1800
-Wire Wire Line
-	5500 1800 5600 1800
-Connection ~ 5600 1800
-Wire Wire Line
-	5600 1800 5800 1800
-Connection ~ 5800 1800
-Wire Wire Line
-	5800 1800 5900 1800
-Wire Wire Line
 	5300 1800 5300 1650
-Connection ~ 5300 1800
 Text GLabel 6700 2500 2    50   Input ~ 0
 USB1+
 Text GLabel 6700 2400 2    50   Input ~ 0
@@ -435,7 +404,7 @@ USB4-
 Text GLabel 6700 4000 2    50   Input ~ 0
 USB4+
 $Comp
-L conn:USB_A J5
+L main-rescue:USB_A-conn J5
 U 1 1 5C753BD9
 P 8200 1550
 F 0 "J5" H 8350 1900 50  0000 C CNN
@@ -552,7 +521,6 @@ F 3 "" H 1350 1650 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1350 1650 1400 1650
-Connection ~ 1400 1650
 $Comp
 L power:+5V #PWR0119
 U 1 1 5C772F94
@@ -635,8 +603,6 @@ F 3 "~" H 3400 3600 50  0001 C CNN
 	1    3400 3600
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	3300 3200 3300 3600
 $Comp
 L power:GND #PWR0122
 U 1 1 5C7792B1
@@ -672,12 +638,6 @@ F 3 "~" H 4000 3900 50  0001 C CNN
 	1    4000 3900
 	-1   0    0    1   
 $EndComp
-Connection ~ 3300 3600
-Wire Wire Line
-	3300 3600 3300 3650
-Wire Wire Line
-	4000 3600 4350 3600
-Connection ~ 4000 3600
 Wire Wire Line
 	4000 3700 4500 3700
 $Comp
@@ -758,7 +718,6 @@ Wire Wire Line
 	2750 3100 2750 3200
 Wire Wire Line
 	2750 2900 2750 2850
-Connection ~ 2750 2900
 $Comp
 L power:+3V3 #PWR0126
 U 1 1 5C7960D4
@@ -866,9 +825,6 @@ Wire Wire Line
 Wire Wire Line
 	2800 5100 2550 5100
 Connection ~ 2550 5100
-Wire Wire Line
-	2800 5500 2550 5500
-Connection ~ 2550 5500
 $Comp
 L device:C_Small C16
 U 1 1 5C7B3A70
@@ -888,9 +844,6 @@ Connection ~ 2800 5100
 Wire Wire Line
 	3050 5450 3050 5500
 Wire Wire Line
-	3050 5500 2800 5500
-Connection ~ 2800 5500
-Wire Wire Line
 	3600 2400 4500 2400
 $Comp
 L power:+3V3 #PWR0129
@@ -906,11 +859,17 @@ $EndComp
 Wire Wire Line
 	3500 3200 4000 3200
 Wire Wire Line
-	3500 3600 4000 3600
-Wire Wire Line
 	8100 2950 8200 2950
 Connection ~ 8200 2950
 Wire Wire Line
 	8100 1950 8200 1950
 Connection ~ 8200 1950
+Wire Wire Line
+	3300 3200 3300 3650
+Wire Wire Line
+	3500 3600 4350 3600
+Wire Wire Line
+	5300 1800 5900 1800
+Wire Wire Line
+	1500 5500 3050 5500
 $EndSCHEMATC
